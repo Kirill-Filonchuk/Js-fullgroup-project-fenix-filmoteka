@@ -1,10 +1,10 @@
 [
-  {
+   {
     "id": 1,
-    "name": "Evhenyi",
+    "name": "Kyryll",
     "position": "TeamLead",
-    "image": "https://ca.slack-edge.com/T01QBJQP8PR-U01RV3CG492-1a171aa63ad7-48",
-    "gitHub": "https://github.com/EKhoroshko"
+    "image": "https://ca.slack-edge.com/T01QBJQP8PR-U01RPCLA4RG-9dc02d4c811c-512",
+    "gitHub": "https://github.com/Kirill-Filonchuk"
   },
   {
     "id": 2,
@@ -16,7 +16,7 @@
   {
     "id": 3,
     "name": "Alexandr",
-    "position": "Front end developer",
+    "position": "Tech Lead",
     "image": "https://ca.slack-edge.com/T01QBJQP8PR-U01RGC52M62-64c52b357555-72",
     "gitHub": "https://github.com/oleksandr-suslov"
   },
@@ -34,12 +34,12 @@
     "image": "https://ca.slack-edge.com/T01QBJQP8PR-U01RVB1UXA8-7c360e714feb-72",
     "gitHub": "https://github.com/dimagorga"
   },
-  {
+   {
     "id": 6,
-    "name": "Kyryll",
-    "position": "Front end developer",
-    "image": "https://ca.slack-edge.com/T01QBJQP8PR-U01RPCLA4RG-3092bbc92bf5-72",
-    "gitHub": "https://github.com/Kirill-Filonchuk"
+    "name": "Evhenyi",
+    "position": "Tech Lead",
+    "image": "https://ca.slack-edge.com/T01QBJQP8PR-U01RV3CG492-1a171aa63ad7-48",
+    "gitHub": "https://github.com/EKhoroshko"
   },
   {
     "id": 7,
