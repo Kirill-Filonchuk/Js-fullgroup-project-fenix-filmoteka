@@ -1,0 +1,216 @@
+.team-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-github {
+  // content: '';
+  height: 24px;
+  width: 24px;
+  z-index: 999;
+}
+
+.team-modal-backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.team-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  //width: 100%;
+  background-image: url(../images/img-modal.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  //скролл по х пока оставляю
+  overflow-x: auto;
+  // z-index: 100;
+  max-height: 100%;
+  min-width: 280px;
+  padding: 15px;
+
+  @extend %transition;
+}
+
+.team-modal-backdrop.is-hidden .team-modal {
+  transform: translate(-50%, -50%) scale(0.5) rotate(-360deg);
+}
+
+.btn-close {
+  position: absolute;
+  background-color: var(--white-color);
+  fill: var(--title-color);
+  cursor: pointer;
+  @extend %transition;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  border: none;
+
+  &:focus,
+  &:hover {
+    background-color: var(--accent-color);
+    fill: var(--white-color);
+  }
+}
+
+.close-icon {
+  content: '';
+  height: 14px;
+  width: 14px;
+}
+.team-modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-modal-title {
+  color: var(--accent-color);
+  font-weight: 700;
+  text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+.student-img {
+  margin: auto;
+  width: 100px;
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+.student-info {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: rgba(231, 222, 222, 0.8);
+  padding: 7px;
+}
+.info-item {
+  margin-bottom: 5px;
+  margin-left: 4px;
+  color: #050505;
+}
+.info-item-student {
+  color: #df6616;
+}
+.team-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.info-item-link {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .team-modal {
+    display: flex;
+    width: 700px;
+    height: 700px;
+  }
+  .team-student-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .student-info {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 200px;
+  }
+  .student-info:first-child {
+    margin-right: 30px;
+    margin-left: 100px;
+  }
+  .student-info:nth-child(2) {
+    margin-right: 100px;
+    margin-left: 30px;
+  }
+  .team-modal-button {
+    width: 175px;
+    padding: 13px 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .team-modal {
+    display: flex;
+    min-width: 950px;
+    height: 1000px;
+    overflow-x: hidden;
+  }
+  .team-modal-wrapper {
+    display: flex;
+  }
+  .team-student-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 999;
+  }
+  .student-info {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 200px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .student-info:first-child {
+    margin-right: 30px;
+    margin-left: 180px;
+  }
+  .student-info:nth-child(2) {
+    margin-right: 180px;
+    margin-left: 30px;
+  }
+  .team-modal-button {
+    width: 180px;
+    padding: 13px 8px;
+    z-index: 999;
+  }
+
+  .fullscreen-bg {
+    overflow: hidden;
+    z-index: -100;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top: 45%;
+  }
+
+  .fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+
+    // width: 100%;
+    // height: 150%;
+    transform: translate(-50%, -50%) scale(3) rotate(0deg);
+    z-index: -150;
+  }
+}
+@media (max-width: 1023px) {
+  .fullscreen-bg__video {
+    display: none;
+  }
+}

@@ -1,0 +1,45 @@
+.container {
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 47px 0 43px;
+}
+
+.main {
+  padding: 20px 0 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 76px;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding: 41px 0 59px;
+  }
+
+  .main {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1024px;
+    padding: 0 71px;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding: 41px 0 59px;
+  }
+
+  .main {
+    padding: 60px 0;
+  }
+}

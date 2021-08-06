@@ -1,0 +1,38 @@
+{
+  "name": "parcel-project-template",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://kirill-filonchuk.github.io/js-fullgroup-project-fenix-filmoteka",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /js-fullgroup-project-fenix-filmoteka/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+  },
+  "keywords": [],
+  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.6.2",
+    "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "debounce": "^1.2.1",
+    "material-design-icons": "^3.0.1",
+    "modal": "^1.2.0",
+    "pagination": "^0.4.6",
+    "pnotify": "^5.2.0",
+    "toaster-js": "^2.2.3",
+    "tui-pagination": "^3.4.1"
+  }
+}
