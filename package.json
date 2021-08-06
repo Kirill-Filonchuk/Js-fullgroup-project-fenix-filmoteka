@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://kirill-filonchuk.github.io/js-fullgroup-project-fenix-filmoteka",
+  "homepage": "https://kirill-filonchuk.github.io/Js-fullgroup-project-fenix-filmoteka",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /js-fullgroup-project-fenix-filmoteka/"
+    "build": "parcel build src/*.html --public-url /Js-fullgroup-project-fenix-filmoteka/"
   },
   "repository": {
     "type": "git",
