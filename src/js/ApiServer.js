@@ -3,7 +3,7 @@ import genreMovies from './genre';
 import getRefs from './get-refs.js';
 const refs = getRefs();
 
-const KEY = '494b2b5ea2ae23dbb3e89fabdc88e3f6';
+const KEY = '4e444e8999b67eb8a9fe595c0fd531aa';
 const BASE_URL = 'https://api.themoviedb.org/3/';
 
 export default class FilmsApiServise {
