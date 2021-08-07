@@ -25,5 +25,6 @@ export default function getRefs() {
     leaveBtn: document.querySelector('.team-modal-button'),
     logotype: document.querySelector('.logotype'),
     scroll: document.querySelector('#scroll'),
+    message: document.querySelector('.warning'),
   };
 }
