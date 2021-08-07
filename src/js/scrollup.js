@@ -24,8 +24,8 @@ window.onload = function() { // после загрузки страницы
   function scrollToTop() {
     if (scrolled > 0) {
       window.scrollTo(0, scrolled);
-      scrolled = scrolled - 50;
-      timer = setTimeout(scrollToTop, 20);
+      scrolled = scrolled - 20;
+      timer = setTimeout(scrollToTop, 10);
     }
     else {
       clearTimeout(timer);
