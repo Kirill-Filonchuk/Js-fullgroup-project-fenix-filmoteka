@@ -42,7 +42,7 @@ refs.navLink[1].addEventListener('click', event => {
 refs.navLink[0].addEventListener('click', event => {
 
   filmsApiServise.resetPage()
-  // clearfilms();
+  clearfilms();
   if (event.target.classList.contains('navTitle')) {
     refs.navLink[0].classList.add('current');
     refs.navLink[1].classList.remove('current');
@@ -55,7 +55,7 @@ refs.navLink[0].addEventListener('click', event => {
 
 refs.logotype.addEventListener('click', event => {
   filmsApiServise.resetPage()
-  // clearfilms();
+  clearfilms();
   if (event.target) {
     refs.navLink[0].classList.add('current');
     refs.navLink[1].classList.remove('current');
@@ -101,12 +101,15 @@ function createFilmsList() {
 // filmsApiServise.resetPage()
     // filmsApiServise.incrementPage();
     // console.log(hits.results.length === 0);
-    // if (hits.results.length === 0) {
+    if (hits.results.length === 0) {
+      refs.message.classList.remove("text-warning");
+      setTimeout(()=> refs.message.classList.add("text-warning"), 3000)
+    }
     //   return Toast.add({
     //   text: 'Всем привет',
     //   color: '#dc3545 !important',
     //   autohide: false
-    //   });
+      // });
     //   console.log(Toast);}
 
 
