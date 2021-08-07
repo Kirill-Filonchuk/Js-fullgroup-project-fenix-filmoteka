@@ -24,6 +24,8 @@ function onOpenModal(result) {
   }
 }
 
+
+
 function renderCardModal(result) {
   const film = result.target.id;
   const switchData = data => data.id === Number(film);
@@ -34,11 +36,13 @@ function renderCardModal(result) {
       ...getLocalStorageWatched().find(switchData),
     };
 // console.log('allFilms',allFilms);
+    // refs.modalForm.insertAdjacentHTML('beforeend', cardModal(allFilms))
     refs.modalForm.innerHTML = cardModal(allFilms);
     return
   }
 
   filmsApiServise.fetchFilmsDescription(film).then(data => {
+    // refs.modalForm.insertAdjacentHTML('beforeend', cardModal(data))
     refs.modalForm.innerHTML = cardModal(data);
   });
 }
@@ -46,8 +50,8 @@ function renderCardModal(result) {
 function onCloseModal(e) {
   const target = e.target;
   if (
-    target.matches('.about-close') ||
-    target.matches('.close-icon') ||
+    target.classList.contains('about-close') ||
+    target.classList.contains('close-icon') ||
     target.classList.contains('modal-backdrop')
   ) {
     refs.modal.classList.add('is-hidden');
@@ -73,23 +77,25 @@ refs.modal.addEventListener('click', onCloseModal);
 // Watched
 refs.btnWatchedInHeader.addEventListener('click', btnWatchedInHeader);
 
-function btnWatchedInHeader(e) {
+function btnWatchedInHeader() {
    refs.btnWatchedInHeader.classList.add('activeHeaderBtn');
   refs.btnQueueInHeader.classList.remove('activeHeaderBtn');
+  clearfilms();
   renderCardMain(getLocalStorageWatched());
 }
 // Queue
 refs.btnQueueInHeader.addEventListener('click', btnQueueInHeader);
 
-function btnQueueInHeader (e) {
+function btnQueueInHeader () {
   refs.btnQueueInHeader.classList.add('activeHeaderBtn');
   refs.btnWatchedInHeader.classList.remove('activeHeaderBtn');
+  clearfilms();
   renderCardMain(getLocalStorageQueue());
 }
 
 refs.modal.addEventListener('click', e => {
     //  filmsApiServise.resetPage()
-  if (e.target.classList.contains('movie-add-queue')) {
+   if (e.target.classList.contains('movie-add-queue')) {
    
     if (e.target.classList.contains('delete-queue') || e.target.textContent === 'remove from queue') {
       
@@ -143,6 +149,7 @@ refs.modal.addEventListener('click', e => {
 });
 
 refs.modal.addEventListener('click', e => {
+  
       // filmsApiServise.resetPage()
   if (e.target.classList.contains('movie-add-watched')) {
     
@@ -157,6 +164,7 @@ refs.modal.addEventListener('click', e => {
       }
       return;
     }
+
     e.target.classList.add('delete-watched');
     e.target.textContent = 'remove from watched';
     filmsApiServise.fetchFilmsDescription(e.target.id).then(data => {

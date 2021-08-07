@@ -3,7 +3,7 @@ import genreMovies from './genre';
 import getRefs from './get-refs.js';
 const refs = getRefs();
 
-const KEY = '4e444e8999b67eb8a9fe595c0fd531aa';
+const KEY = '494b2b5ea2ae23dbb3e89fabdc88e3f6';
 const BASE_URL = 'https://api.themoviedb.org/3/';
 
 export default class FilmsApiServise {
@@ -18,14 +18,13 @@ export default class FilmsApiServise {
     const url = `${BASE_URL}/trending/movie/week?api_key=${KEY}&page=${this.page}`;
     return fetch(url)
       .then(response => {
-        // this.incrementPage();
         return response.json();
       })
       .then(data => {
         return {
           results: this.addedNewKeytoArr(data),
-          //  totalAmount: data.total_results,
-          // pageNumber: this.page,
+           totalAmount: data.total_results,
+          pageNumber: this.page,
         };
       });
   }
@@ -35,20 +34,14 @@ export default class FilmsApiServise {
     const url = `${BASE_URL}search/movie?api_key=${KEY}&language=en-US&page=${this.page}&include_adult=false&query=${this.searchQuery}`;
     return fetch(url)
       .then(response => {
-        // this.incrementPage();
         return response.json();
       })
       .then(data => {
-        if (data.results.length == 0) {
-      console.log('no movie')
-         refs.inputRef.innerHTML = `<label> Фильмы не найдены </label>`;
-          
-    } else
-        {return {
+          return {
           results: this.addedNewKeytoArr(data),
-          // totalAmount: data.total_results,
-          // pageNumber: this.page,
-        };}
+          totalAmount: data.total_results,
+          pageNumber: this.page,
+          };
       });
   }
 
@@ -110,15 +103,7 @@ export default class FilmsApiServise {
     this.page = 1;
   }
 
-  // currentPage(number) {
-  //   this.page = number;
-  //   }
-
-  //   get query() {
-  //       return this.searchQuery
-  //   }
-
-  //   set query(newQuery) {
-  //       this.searchQuery = newQuery;
-  //   }
+  currentPage(number) {
+    this.page = number;
+    }
 }
