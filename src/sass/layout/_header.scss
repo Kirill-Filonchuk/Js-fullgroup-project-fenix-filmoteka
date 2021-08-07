@@ -179,7 +179,29 @@ input[type='checkbox'].switch_3:checked + svg.checkbox .is_unchecked {
     .toast:not(:last-child) {
       margin-bottom: 0.75rem;
       }
-
+      .form{
+        margin: auto;
+        }
+        .warning-wrapper{
+          display: flex;
+           margin-top: 22px;
+        }
+        .warning{
+          font-weight: 400px;
+          font-size: 14px;
+          color: #FF001B;
+          list-style: 1.17;
+          
+        }
+     .text-warning{
+      visibility: hidden;
+     }
+  .library .library-warning{
+    display: none;
+  }
+// .library-warning{
+//   display: none;
+// }
 .library {
   width: 100%;
   background-position: center;
@@ -446,14 +468,14 @@ svg.checkbox .is_checked {
   border: none;
   outline: none;
   background: transparent;
-  margin-top: 41px;
+  margin-top: 15px;
   //  margin-bottom: 18px;
 
   color: var(--white-color);
 }
-.input-form {
-  margin-bottom: 18px;
-}
+// .input-form {
+//   margin-bottom: 18px;
+// } 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus input:-webkit-autofill,
@@ -478,9 +500,9 @@ select:-webkit-autofill:focus {
 .input-label {
   border-style: none;
 }
-.input-form {
-  width: 100%;
-}
+// .input-form {
+//   width: 100%;
+// }
 .navigationLink {
   margin-right: 39px;
 }
@@ -488,10 +510,12 @@ select:-webkit-autofill:focus {
   background-color: initial;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 18px;
+  // padding-bottom: 18px;
 }
 .input-form {
   position: relative;
+  // margin-bottom: 41px;
+  width: 100%;
 }
 .formBtn {
   bottom: 0px;
@@ -516,6 +540,8 @@ select:-webkit-autofill:focus {
 .headerItem {
   position: relative;
 }
+// 
+
 .navigationLink.current::after {
   content: '';
   position: absolute;
@@ -581,9 +607,15 @@ select:-webkit-autofill:focus {
     width: 336px;
     margin: auto;
   }
+  .modal-form-input{
+    margin-top: 21px;
+  }
 }
 @media screen and(min-width:1024px) {
   .logotype {
     margin-right: 400px;
+  }
+   .modal-form-input{
+    margin-top: 21px;
   }
 }

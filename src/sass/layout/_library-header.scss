@@ -1,5 +1,6 @@
 .library {
   width: 100%;
+  padding-bottom: 53px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -80,6 +81,9 @@
   .navHeadList {
     display: flex;
     margin-left: auto;
+  }
+  .library_buttons{
+    margin-bottom: 6px;
   }
 }
 @media screen and (min-width: 1024px) {
